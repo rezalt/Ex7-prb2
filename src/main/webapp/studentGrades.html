@@ -1,0 +1,21 @@
+
+
+<table class="table">
+    <thead>
+        <tr >
+            <th></th>
+            <th ng-repeat="courses in ctrl.courses">
+                {{courses.courseName}}
+            </th>
+            <th>Average</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="student in ctrl.students">
+            <td>{{student.name}}</td>
+            <td ng-repeat="grade in student.grades">{{grade.grade}}</td>
+            <td>{{calculateAverage(student.grades)}}</td>
+        </tr>
+    </tbody>
+</table>
+
